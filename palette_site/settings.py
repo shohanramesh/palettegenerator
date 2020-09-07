@@ -25,7 +25,7 @@ SECRET_KEY = 'ylvq2jvx7m6h^5e@u40@saz7n2a23w8jagoqlw*7=+79*y5$j$'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['limitless-refuge-29527.herokuapp.com','127.0.0.1']
+ALLOWED_HOSTS = ['limitless-refuge-29527.herokuapp.com','palettegenerator.herokuapp.com','127.0.0.1']
 
 
 # Application definition
