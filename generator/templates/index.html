@@ -1,0 +1,52 @@
+﻿{% load static %}
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="shortcut icon" href="{% static 'assets/favicon.ico' type='image/x-icon' %}">
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" type="text/css" href="{% static 'styles.css' %}">
+		<!-- Used for responsive navigation bar -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+		<script>
+			$(function() {
+    			$(".navbar").load("navbar.html");
+			});
+		</script>
+		<title>Palette Generator | SPIS 2020</title>
+	</head>
+	<body>
+		
+		{% include "navbar.html" %}
+		<div class="navbar"></div>
+		<div class="body_text">
+			<h1>Palette Generator</h1>
+			<div class="para_text">
+				<p>
+					A tool to create color palettes using the most dominant colors in an image.
+				</p>
+				<br />
+				<p>
+					Please head to the navigation bar to get started. Alternatively, select one of the options on the diamond.
+				</p>
+				<br />
+				<p>
+					To create a palette, please head over to <a href="{% url 'Generator' %}">the generator</a>.
+				</p>
+			</div>
+			<div class="visual">
+				<img src="{% static 'assets/visual.png' %}" alt="Visual" usemap="#visualmap">
+
+				<!-- Imagemaps created by Online Image Map Editor (http://www.maschek.hu/imagemap/index) -->
+				<map name="visualmap">
+					<area shape="poly" coords="299,0,157,142,303,288,449,142,306,-1" href="{% url 'Home' %}" alt="Index">
+					<area shape="poly" coords="0,298,141,156,290,304,142,450,0,307" href="{% url 'About' %}" alt="About">
+					<area shape="poly" coords="605,298,462,155,317,303,464,452,604,311" href="{% url 'Generator' %}" alt="Generate">
+					<area shape="poly" coords="298,605,156,463,304,315,451,463,310,603" href="{% url 'Examples' %}" alt="Examples">
+				</map>
+
+			</div>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,119 @@
+/* IMPORTS */
+/* Montserrat font - to be used in navigation bar */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap');
+
+body {
+	background: #000;
+    min-width: 100%;
+    margin: 0;
+}
+a, a:hover, a:active {
+	color: #ffcb6a;
+	text-decoration: none;
+}
+a + a {
+    margin-left: 30px;
+}
+/* Custom scrollbar */	
+::-webkit-scrollbar {
+	width: 12px;
+}
+
+::-webkit-scrollbar-track {
+	background: transparent; 
+}
+
+::-webkit-scrollbar-thumb {
+	background: #fff; 
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background: #ffcb6a; 
+}
+
+.body_text {
+	color: #fff;
+	font-family: Montserrat;
+	margin: 50px;
+}
+.para_text {
+    margin: 10px 50px;
+    font-size: 30px;
+    width: 50%;
+    float: left;
+    line-height: 60px;
+}
+
+h1 {
+    font-family: Arial;
+    font-size: 60px;
+    color: #000;
+    background: #ffcb6a;
+    padding: 0px 20px;
+    text-transform: uppercase;
+}
+.visual {
+	float: right;
+	text-align: center;	
+}
+img {
+    max-width: 100%;
+    height: auto;
+}
+.fa {
+	margin: 10px;
+}
+
+.navbar {
+    background: #000;
+    border-bottom: 1px solid #ffcb6a;
+    font-family: 'Montserrat', sans-serif;
+    min-width: 100%;
+    overflow: hidden;
+    position: inherit;
+}
+.navbar a {
+	color: #fff;
+	font-family: inherit;
+	font-size: 24px;
+    letter-spacing: 3px;
+    line-height: inherit;
+	text-decoration: none;
+	text-transform: uppercase;
+    vertical-align: middle;
+}
+
+.navbar a:hover {
+	color: #ffcb6a;
+}
+
+.navbar a:active {
+	color: #ff7844;
+}
+
+/* From w3school's responsive navbar section (https://www.w3schools.com/howto/howto_js_topnav_responsive.asp) */
+.navbar .icon {
+  display: none;
+}
+
+@media screen and (max-width: 600px) {
+	.navbar a:not(:first-child) {display: none;}
+	.navbar a.icon {
+		float: right;
+		display: block;
+	}
+}
+
+@media screen and (max-width: 600px) {
+	.navbar.responsive {position: relative;}
+	.navbar.responsive .icon {
+		position: absolute;
+		right: 0;
+		top: 0;
+	}
+	.navbar.responsive a {
+		float: none;
+		display: block;
+		text-align: left;
+	}
+}

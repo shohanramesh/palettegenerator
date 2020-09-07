@@ -1,0 +1,41 @@
+﻿{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="shortcut icon" href="{% static 'assets/favicon.ico' type='image/x-icon' %}">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="{% static 'styles.css' %}">
+	<!-- Used for responsive navigation bar -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script>
+		$(function () {
+			$(".navbar").load("navbar.html");
+		});
+	</script>
+	<title>Generator | Palette Generator | SPIS 2020</title>
+</head>
+<body>
+	{% include "navbar.html" %}
+	<div class="navbar"></div>
+	<div class="para_text" style="color: #fff; font-family: Montserrat; margin: 10px 50px; font-size: 30px; width: 50%; float: left; line-height: 60px;">
+		<p>
+			Choose any image file that you would like to generate a palette from.
+		</p>
+		
+		<p>
+			Once you have selected your file, click the generate button to make your palette.
+		</p>
+		
+		
+	</div>
+	<div id="temp1" style="color: #fff; font-family: Montserrat; margin: 0px 50px; font-size: 20px; width: 50%; float: left; ">
+		<form  method="post" enctype="multipart/form-data">
+			{% csrf_token %}
+			{{ form.as_p }}
+			<button style=" margin-left: 150px;"  type="submit">Generate</button>
+		</form>
+	</div>
+</body>
+</html>

@@ -1,0 +1,39 @@
+﻿{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="shortcut icon" href="{% static 'assets/favicon.ico' type='image/x-icon' %}">
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="{% static 'styles.css' %}">
+	<!-- Used for responsive navigation bar -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script>
+		$(function () {
+			$(".navbar").load("navbar.html");
+		});
+	</script>
+	<title>Examples | Palette Generator | SPIS 2020</title>
+</head>
+<body>
+	{% include "navbar.html" %}
+	<div class="navbar"></div>
+	<div class="body_text">
+		<h1>Palette Examples</h1>
+	</div>
+	<div class="colors" style="margin: 0px 100px;">
+		<img src="{% static 'assets/display1.jpg' %}" alt="Example 1">
+		
+	</div>
+	<div class="colors" style="margin: 0px 100px;">
+		<img src="{% static 'assets/display2.jpg' %}" alt="Example 2">
+		
+	</div>
+	<div class="colors" style="margin: 0px 100px;">
+		<img src="{% static 'assets/display3.jpg' %}" alt="Example 3">
+		
+	</div>
+</body>
+</html>
